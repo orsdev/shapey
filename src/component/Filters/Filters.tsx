@@ -1,3 +1,4 @@
+import Colors from "./Colors"
 import Shapes from "./Shapes"
 
 const Filters = () => {
@@ -5,6 +6,7 @@ const Filters = () => {
     <section className="filters">
       <h3 className="filters-title">Filters</h3>
       <Shapes />
+      <Colors />
     </section>
   )
 }
