@@ -58,6 +58,7 @@
 .shapes-type li label {
   font-size: 1.5rem;
   border: 1px solid #636262;
+  text-transform: capitalize;
   border-radius: 20px;
   padding: 5px 10px;
   -webkit-user-select: none;
