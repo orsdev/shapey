@@ -1,0 +1,49 @@
+.shapes {
+  margin-top: 30px;
+
+  &-title {
+    font-size: 1.6rem;
+    color: $color-blue;
+  }
+
+  &-type {
+    margin-top: 25px;
+    list-style: none;
+    margin: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      position: relative;
+      margin-bottom: 20px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      label {
+        font-size: 1.5rem;
+        border: 1px solid $color-gray;
+        border-radius: 20px;
+        padding: 5px 10px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+
+        &:checked + label {
+          transition: all 0.3s;
+          background-color: lighten($color-skyblue, 10%);
+        }
+      }
+    }
+  }
+}

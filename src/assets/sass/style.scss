@@ -1,5 +1,7 @@
 @import './includes/colors';
 @import './components/navbar';
+@import './components/filters';
+@import './components/shapes';
 
 *,
 *::before,
@@ -19,4 +21,8 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.app {
+  padding: 20px 30px;
 }

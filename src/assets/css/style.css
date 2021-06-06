@@ -26,6 +26,57 @@
   margin-left: 0.5rem;
 }
 
+.filters {
+  margin-top: 40px;
+  padding: 0 25px;
+}
+.filters-title {
+  font-size: 2rem;
+}
+
+.shapes {
+  margin-top: 30px;
+}
+.shapes-title {
+  font-size: 1.6rem;
+  color: #2121fd;
+}
+.shapes-type {
+  margin-top: 25px;
+  list-style: none;
+  margin: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shapes-type li {
+  position: relative;
+  margin-bottom: 20px;
+}
+.shapes-type li:not(:last-child) {
+  margin-right: 20px;
+}
+.shapes-type li label {
+  font-size: 1.5rem;
+  border: 1px solid #636262;
+  border-radius: 20px;
+  padding: 5px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.shapes-type li input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.shapes-type li input:checked + label {
+  transition: all 0.3s;
+  background-color: #cff0fd;
+}
+
 *,
 *::before,
 *::after {
@@ -44,6 +95,10 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.app {
+  padding: 20px 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
