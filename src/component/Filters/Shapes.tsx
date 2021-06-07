@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addShapes, removeShapes } from '../../redux/actions/shapes.action';
 import Data from '../../data.json';
 
-const Shapes_List = ['oval', 'round', 'triangle', 'square', 'rectangle'];
-
 const Shapes = () => {
   const { shapes } = useSelector(
     (state: RootState) => state.shapes);
@@ -43,7 +41,7 @@ const Shapes = () => {
     <section className="shapes">
       <h4 className="shapes-title">Shapes</h4>
       <ul className="shapes-type">
-        {Shapes_List.map((shape, index) => (
+        {Data.shapes.map((shape, index) => (
           <li key={index}>
             <input type="checkbox" name={shape} id={shape} checked={checkedState[index]} onChange={(e) => onChangeHandler(e, index)} />
             <label htmlFor={shape} className={shape}>{shape}</label>

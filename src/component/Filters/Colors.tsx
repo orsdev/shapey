@@ -4,10 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addColors, removeColors } from '../../redux/actions/colors.action';
 import Data from '../../data.json';
 
-const Colors_List = [
-  'red', 'blue', 'green', 'yellow', 'skyblue', 'gray'
-];
-
 const Colors = () => {
   const { colors } = useSelector(
     (state: RootState) => state.colors);
@@ -44,7 +40,7 @@ const Colors = () => {
     <section className="colors">
       <h4 className="colors-title">Colors</h4>
       <ul className="colors-type">
-        {Colors_List.map((color, index) => (
+        {Data.colors.map((color, index) => (
           <li key={index}>
             <input type="checkbox" name={color} id={color} checked={checkedState[index]} onChange={(e) => onChangeHandler(e, index)} />
             <label htmlFor={color} className={color} />
