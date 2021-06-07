@@ -1,6 +1,6 @@
 import actionTypes from '../actiontypes';
 import * as TYPE from '../type';
-import { addNewShape } from '../utils/shapes';
+import { addNewShape } from '../utils/helper';
 
 const initialState = {
   shapes: []
