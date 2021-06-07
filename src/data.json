@@ -1,0 +1,17 @@
+  {
+    "colors": [
+      "red",
+      "blue",
+      "green",
+      "yellow",
+      "skyblue",
+      "gray"
+    ],
+    "shapes": [
+      "oval",
+      "round",
+      "square",
+      "rectangle",
+      "triangle"
+    ]
+  }
