@@ -140,6 +140,39 @@
   border: 3px solid #8686fe;
 }
 
+.grid {
+  margin-top: 30px;
+}
+.grid-title {
+  font-size: 1.6rem;
+}
+.grid-items {
+  margin-top: 25px;
+  list-style: none;
+  margin: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+  gap: 40px;
+}
+.grid-items li {
+  box-shadow: 2px 4px 5px 0.1px gainsboro;
+  height: 100px;
+  position: relative;
+  text-align: center;
+}
+.grid-items li span {
+  display: inline-block;
+  transition: all 0.4s;
+}
+.grid-items li span.oval {
+  height: 80px;
+  width: 60px;
+  border-radius: 50%;
+}
+.grid-items li span.red {
+  background-color: red;
+}
+
 *,
 *::before,
 *::after {
