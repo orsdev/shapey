@@ -10,12 +10,15 @@
     list-style: none;
     margin: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
     gap: 40px;
 
     li {
       box-shadow: 2px 4px 5px 0.1px gainsboro;
-      height: 100px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       text-align: center;
 
@@ -29,8 +32,49 @@
           border-radius: 50%;
         }
 
+        &.round {
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+        }
+
+        &.triangle {
+          height: 80px;
+          width: 80px;
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        &.square {
+          height: 80px;
+          width: 80px;
+        }
+
+        &.rectangle {
+          width: 150px;
+          height: 100px;
+        }
+
         &.red {
-          background-color: red;
+          background-color: $color-red;
+        }
+
+        &.blue {
+          background-color: $color-blue;
+        }
+
+        &.green {
+          background-color: $color-green;
+        }
+        &.yellow {
+          background-color: $color-yellow;
+        }
+
+        &.skyblue {
+          background-color: $color-skyblue;
+        }
+
+        &.gray {
+          background-color: $color-gray;
         }
       }
     }

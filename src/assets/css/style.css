@@ -151,12 +151,15 @@
   list-style: none;
   margin: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
   gap: 40px;
 }
 .grid-items li {
   box-shadow: 2px 4px 5px 0.1px gainsboro;
-  height: 100px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   text-align: center;
 }
@@ -169,8 +172,41 @@
   width: 60px;
   border-radius: 50%;
 }
+.grid-items li span.round {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+.grid-items li span.triangle {
+  height: 80px;
+  width: 80px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.grid-items li span.square {
+  height: 80px;
+  width: 80px;
+}
+.grid-items li span.rectangle {
+  width: 150px;
+  height: 100px;
+}
 .grid-items li span.red {
-  background-color: red;
+  background-color: #ff1f1f;
+}
+.grid-items li span.blue {
+  background-color: #2121fd;
+}
+.grid-items li span.green {
+  background-color: #058d05;
+}
+.grid-items li span.yellow {
+  background-color: #ffff25;
+}
+.grid-items li span.skyblue {
+  background-color: #9ee0fa;
+}
+.grid-items li span.gray {
+  background-color: #636262;
 }
 
 *,
