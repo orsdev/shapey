@@ -145,6 +145,7 @@
 }
 .grid-title {
   font-size: 1.6rem;
+  text-transform: capitalize;
 }
 .grid-items {
   margin-top: 25px;
