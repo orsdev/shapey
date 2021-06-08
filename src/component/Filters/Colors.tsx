@@ -2,11 +2,14 @@ import React from 'react';
 import { RootState } from '../../redux/rootReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { addColors, removeColors } from '../../redux/actions/colors.action';
+import { addShapes } from '../../redux/actions/shapes.action';
 import Data from '../../data.json';
 
 const Colors = () => {
   const { colors } = useSelector(
     (state: RootState) => state.colors);
+  const { shapes } = useSelector(
+    (state: RootState) => state.shapes);
 
   const dispatch = useDispatch();
   const [checkedState, setCheckedState] = React.useState(
@@ -16,9 +19,16 @@ const Colors = () => {
   React.useEffect(() => {
     if (!colors.length) {
       dispatch(addColors(Data.colors));
+      dispatch(addShapes(Data.shapes));
       setCheckedState(new Array(Data.colors.length).fill(true))
     }
   }, [colors.length]);
+
+  React.useEffect(() => {
+    if (!shapes.length) {
+      setCheckedState(new Array(Data.colors.length).fill(true))
+    }
+  }, [shapes.length]);
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>, position: number) => {
     const { target } = e;
