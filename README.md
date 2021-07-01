@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before you begin,  ensure you have met the following requirements:
 
     * You have installed the latest version of node & npm
 
