@@ -40,9 +40,10 @@
 .shapes-title {
   font-size: 1.6rem;
   color: #2121fd;
+  margin: 20px 0;
 }
 .shapes-type {
-  margin-top: 25px;
+  margin-top: 20px;
   list-style: none;
   margin: none;
   display: flex;
@@ -84,9 +85,10 @@
 .colors-title {
   font-size: 1.6rem;
   color: #2121fd;
+  margin: 20px 0;
 }
 .colors-type {
-  margin-top: 25px;
+  margin-top: 20px;
   list-style: none;
   margin: none;
   display: flex;
