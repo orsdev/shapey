@@ -30,8 +30,8 @@ const updateTitle = (shapes: string[], colors: string[]): string => {
     title = `All ${shapes.join("")} Items`;
   } else if (allSelectedItems(shapes, 'shapes') && colors.length === 1) {
     title = `All ${colors.join("")} Items`;
-  } else if (allSelectedItems(colors, 'colors') && shapes.length > 1
-    || allSelectedItems(shapes, 'shapes') && colors.length > 1) {
+  } else if ((allSelectedItems(colors, 'colors') && shapes.length > 1)
+    || (allSelectedItems(shapes, 'shapes') && colors.length > 1)) {
     title = `Multiple Items`;
   } else if (shapes.length === 1 && colors.length > 1) {
     title = `Multiple ${shapes.join("")} Items`
@@ -56,6 +56,7 @@ const ShapesColorsGrid: React.FC = () => {
   React.useEffect(() => {
     dispatch(addShapes(Data.shapes));
     dispatch(addColors(Data.colors));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   React.useEffect(() => {
@@ -64,6 +65,7 @@ const ShapesColorsGrid: React.FC = () => {
       setTitle(updatedTitle);
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shapes.length, colors.length])
 
 

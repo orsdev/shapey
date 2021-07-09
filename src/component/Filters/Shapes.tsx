@@ -23,6 +23,7 @@ const Shapes = () => {
       dispatch(addColors(Data.colors));
       setCheckedState(new Array(Data.shapes.length).fill(true))
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shapes.length]);
 
   React.useEffect(() => {
